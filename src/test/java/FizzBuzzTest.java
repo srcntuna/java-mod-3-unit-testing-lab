@@ -9,35 +9,35 @@ class FizzBuzzTest {
     FizzBuzz fizzBuzz;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         fizzBuzz = new FizzBuzz();
     }
 
     @Test
-     void inputStartsWithF() {
+    void fizzStringTest() {
         String input = "foo";
         String result = fizzBuzz.fizzBuzzString(input);
-        assertEquals("Fizz",result);
+        assertEquals("Fizz", result);
     }
 
     @Test
-    void inputEndsWithB(){
+    void buzzStringTest() {
         String input = "knob";
         String result = fizzBuzz.fizzBuzzString(input);
-        assertEquals("Buzz",result);
+        assertEquals("Buzz", result);
     }
 
     @Test
-    void inputStartWithFAndEndsWithB(){
+    void fizzBuzzStringTest() {
         String input = "fooBob";
         String result = fizzBuzz.fizzBuzzString(input);
-        assertEquals("FizzBuzz",result);
+        assertEquals("FizzBuzz", result);
     }
 
     @Test
-    void inputNull(){
+    void inputNullTest() {
         String result = fizzBuzz.fizzBuzzString(null);
-        assertEquals(null,result);
+        assertNull(result);
     }
 
 }
